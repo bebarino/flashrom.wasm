@@ -46,6 +46,9 @@ enum programmer {
 #if CONFIG_RAIDEN == 1
 	PROGRAMMER_RAIDEN,
 #endif
+#if CONFIG_RAIDEN_WASM == 1
+	PROGRAMMER_RAIDEN_WASM,
+#endif
 #if CONFIG_DRKAISER == 1
 	PROGRAMMER_DRKAISER,
 #endif
@@ -414,6 +417,11 @@ extern const struct dev_entry gfx_nvidia[];
 #if CONFIG_RAIDEN == 1
 int raiden_debug_spi_init(void);
 extern const struct dev_entry devs_raiden[];
+#endif
+
+#if CONFIG_RAIDEN_WASM == 1
+int raiden_debug_spi_wasm_init(void);
+extern const struct dev_entry devs_raiden_wasm[];
 #endif
 
 /* drkaiser.c */

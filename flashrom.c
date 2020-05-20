@@ -145,6 +145,18 @@ const struct programmer_entry programmer_table[] = {
 	},
 #endif
 
+#if CONFIG_RAIDEN_WASM == 1
+	{
+		.name			= "raiden_debug_wasm",
+		.type			= USB,
+		.devs.dev		= devs_raiden_wasm,
+		.init			= raiden_debug_spi_wasm_init,
+		.map_flash_region	= fallback_map,
+		.unmap_flash_region	= fallback_unmap,
+		.delay			= internal_delay,
+	},
+#endif
+
 #if CONFIG_DRKAISER == 1
 	{
 		.name			= "drkaiser",

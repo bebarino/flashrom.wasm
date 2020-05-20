@@ -374,6 +374,28 @@ size_t flashrom_flash_getsize(const struct flashrom_flashctx *const flashctx)
 }
 
 /**
+ * @brief Returns the name of the specified flash chip
+ *
+ * @param flashctx The queried flash context.
+ * @return Name of the flash chip
+ */
+const char *flashrom_flash_getname(const struct flashrom_flashctx *const flashctx)
+{
+	return flashctx->chip->name;
+}
+
+/**
+ * @brief Returns the name of the specified flash chip
+ *
+ * @param flashctx The queried flash context.
+ * @return Name of the flash chip
+ */
+const char *flashrom_flash_getvendor(const struct flashrom_flashctx *const flashctx)
+{
+	return flashctx->chip->vendor;
+}
+
+/**
  * @brief Free a flash context.
  *
  * @param flashctx Flash context to free.

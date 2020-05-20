@@ -90,6 +90,8 @@ int flashrom_programmer_shutdown(struct flashrom_programmer *);
 struct flashrom_flashctx;
 int flashrom_flash_probe(struct flashrom_flashctx **, const struct flashrom_programmer *, const char *chip_name);
 size_t flashrom_flash_getsize(const struct flashrom_flashctx *);
+const char *flashrom_flash_getname(const struct flashrom_flashctx *);
+const char *flashrom_flash_getvendor(const struct flashrom_flashctx *);
 int flashrom_flash_erase(struct flashrom_flashctx *);
 void flashrom_flash_release(struct flashrom_flashctx *);
 
