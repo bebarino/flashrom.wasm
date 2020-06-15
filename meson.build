@@ -108,7 +108,6 @@ else
   config_atavia = false
   config_drkaiser = false
   config_gfxnvidia = false
-  config_raiden = false
   config_internal = false
   config_it8212 = false
   config_nic3com = false
