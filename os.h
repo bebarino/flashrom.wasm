@@ -55,6 +55,9 @@
 // GNU Hurd
 #elif defined(__gnu_hurd__)
 #define __FLASHROM_OS__ "Hurd"
+// emscripten (WASM)
+#elif defined(__EMSCRIPTEN__)
+#define __FLASHROM_OS__ "emscripten"
 // Linux
 #elif defined(__linux__)
 	// There are various flags in use on Android apparently. __ANDROID__ seems to be the most trustworthy.

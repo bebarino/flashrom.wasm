@@ -77,9 +77,12 @@
 #elif defined(__arc__)
 	#define __FLASHROM_ARCH__ "arc"
 	#define IS_ARC 1
+#elif defined(__EMSCRIPTEN__)
+	#define __FLASHROM_ARCH__ "wasm32"
+	#define IS_WASM 1
 #endif
 
-#if !(IS_X86 || IS_MIPS || IS_PPC || IS_ARM || IS_SPARC || IS_ALPHA || IS_HPPA || IS_M68K || IS_RISCV || IS_SH || IS_S390 || IS_ARC)
+#if !(IS_X86 || IS_MIPS || IS_PPC || IS_ARM || IS_SPARC || IS_ALPHA || IS_HPPA || IS_M68K || IS_RISCV || IS_SH || IS_S390 || IS_ARC || IS_WASM)
 #error Unknown architecture
 #endif
 
